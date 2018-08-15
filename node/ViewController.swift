@@ -18,20 +18,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         let address = EthereumAddress("0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826") // regtest
 //        let address = EthereumAddress("0x34684c06822bab1f22fc8777bebbb3341c76f15e") // testnet
-        let web3rin = Web3.InfuraRinkebyWeb3()
-        let balanceResult = web3rin.eth.getBalance(address: address!)
-        guard case .success(let balance) = balanceResult else {return}
+        let web3rin = Web3.new(URL(string: "http://153.126.153.29:4444")!)
+        let balanceResult = web3rin?.eth.getBalance(address: address!)
+        guard case .success(let balance)? = balanceResult else {return}
         print(balance)
 
-        let gasPriceResult = web3rin.eth.getGasPrice()
-        guard case .success(let gasprice) = gasPriceResult else {return}
+        let gasPriceResult = web3rin?.eth.getGasPrice()
+        guard case .success(let gasprice)? = gasPriceResult else {return}
         print(gasprice)
 //
         let contractAddress = EthereumAddress("0x1af2844a588759d0de58abd568add96bb8b3b6d8")! // BKX token on Ethereum mainnet
 //        let contractAddress = EthereumAddress("0x7ca735a321664f395e1853a393cd5693ada3bbcb")! // macbook to deploy
 //
         let abi = "[{\"inputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"constant\":true,\"inputs\":[],\"name\":\"getGreeting\",\"outputs\":[{\"name\":\"\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_newGreeting\",\"type\":\"string\"}],\"name\":\"setGreeting\",\"outputs\":[{\"name\":\"success\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"}]"
-        let contract = web3rin.contract(abi, at: contractAddress, abiVersion: 1)! // utilize precompiled ERC20 ABI for your concenience
+        let contract = web3rin?.contract(abi, at: contractAddress, abiVersion: 1)! // utilize precompiled ERC20 ABI for your concenience
         var options = Web3Options.defaultOptions()
         var gasLimit: BigUInt? = BigUInt(5000000000000) // - default gas limit
         var gasPrice: BigUInt? = BigUInt(5000000000000) // - default gas price, quite small
@@ -45,7 +45,7 @@ class ViewController: UIViewController {
 //        guard let result = contract.method("setGreeting", parameters: [writetest] as [AnyObject], options: options) else {return}
 //        let re = result.send()
         
-        guard let result = contract.method("getGreeting", parameters: [], options: options)?.call(options: nil) else {return}
+        guard let result = contract?.method("getGreeting", parameters: [], options: options)?.call(options: nil) else {return}
         print(result)
         guard case .success(let string) = result else {return}
         print(string)
