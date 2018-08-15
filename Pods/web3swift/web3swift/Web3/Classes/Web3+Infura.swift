@@ -14,8 +14,7 @@ import BigInt
 public class InfuraProvider: Web3HttpProvider {
     public init?(_ net:Networks, accessToken token: String? = nil, keystoreManager manager: KeystoreManager? = nil) {
 //        var requestURLstring = "https://" + net.name + ".infura.io/"
-        var requestURLstring = "http://153.126.153.29:4444/"
-        print(requestURLstring)
+        var requestURLstring = "http://153.126.153.29:4444"
         if token != nil {
             requestURLstring = requestURLstring + token!
         }

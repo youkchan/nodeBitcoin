@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C318B7D2123FA8D00958BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C318B7C2123FA8D00958BA1 /* GoogleService-Info.plist */; };
+		4C318B7E2123FA8D00958BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C318B7C2123FA8D00958BA1 /* GoogleService-Info.plist */; };
+		4C318B7F2123FA8D00958BA1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C318B7C2123FA8D00958BA1 /* GoogleService-Info.plist */; };
 		4C7A977A2122ACAC004BAD85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A97792122ACAC004BAD85 /* AppDelegate.swift */; };
 		4C7A977C2122ACAD004BAD85 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A977B2122ACAD004BAD85 /* ViewController.swift */; };
 		4C7A977F2122ACAD004BAD85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C7A977D2122ACAD004BAD85 /* Main.storyboard */; };
@@ -39,6 +42,7 @@
 /* Begin PBXFileReference section */
 		22460E33194FE71EA2DC1D7A /* Pods-nodeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nodeTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nodeTests/Pods-nodeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4809459037284CB93A8081F3 /* Pods-node.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-node.debug.xcconfig"; path = "Pods/Target Support Files/Pods-node/Pods-node.debug.xcconfig"; sourceTree = "<group>"; };
+		4C318B7C2123FA8D00958BA1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C7A97762122ACAC004BAD85 /* node.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = node.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C7A97792122ACAC004BAD85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4C7A977B2122ACAD004BAD85 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				4C7A97802122ACAE004BAD85 /* Assets.xcassets */,
 				4C7A97822122ACAE004BAD85 /* LaunchScreen.storyboard */,
 				4C7A97852122ACAE004BAD85 /* Info.plist */,
+				4C318B7C2123FA8D00958BA1 /* GoogleService-Info.plist */,
 			);
 			path = node;
 			sourceTree = "<group>";
@@ -274,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7A97842122ACAE004BAD85 /* LaunchScreen.storyboard in Resources */,
+				4C318B7D2123FA8D00958BA1 /* GoogleService-Info.plist in Resources */,
 				4C7A97812122ACAE004BAD85 /* Assets.xcassets in Resources */,
 				4C7A977F2122ACAD004BAD85 /* Main.storyboard in Resources */,
 			);
@@ -283,6 +289,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C318B7E2123FA8D00958BA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C318B7F2123FA8D00958BA1 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,9 +316,12 @@
 				"${BUILT_PRODUCTS_DIR}/BigInt/BigInt.framework",
 				"${BUILT_PRODUCTS_DIR}/BitcoinCashKit/BitcoinCashKit.framework",
 				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
 				"${BUILT_PRODUCTS_DIR}/SipHash/SipHash.framework",
 				"${BUILT_PRODUCTS_DIR}/libsodium/libsodium.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 				"${BUILT_PRODUCTS_DIR}/secp256k1_ios/secp256k1_ios.framework",
 				"${BUILT_PRODUCTS_DIR}/web3swift/web3swift.framework",
 			);
@@ -321,9 +332,12 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BigInt.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BitcoinCashKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SipHash.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libsodium.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/secp256k1_ios.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/web3swift.framework",
 			);
@@ -571,10 +585,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = node/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.node";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -590,10 +601,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = node/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.node";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -610,11 +618,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -632,11 +636,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -653,11 +653,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -674,11 +670,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
