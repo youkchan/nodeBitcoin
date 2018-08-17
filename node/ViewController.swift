@@ -9,6 +9,7 @@
 import UIKit
 import web3swift
 import BigInt
+import BitcoinCashKit
 
 class ViewController: UIViewController {
 
@@ -29,6 +30,13 @@ class ViewController: UIViewController {
         //ecverify(web3: web3!)
         
         
+//        let privateKey = PrivateKey(network: .testnetBTC) // You can choose .mainnet or .testnet
+//        let wallet = Wallet(privateKey: privateKey)
+//        print(wallet.privateKey)
+//        print(wallet.publicKey.network)
+//        let address = LegacyAddress.init(wallet.publicKey)
+//        print(address)
+
 //        let address = EthereumAddress("0xcd2a3d9f938e13cd947ec05abc7fe734df8dd826") // regtest
 ////        let address = EthereumAddress("0x34684c06822bab1f22fc8777bebbb3341c76f15e") // testnet
 //        let web3rin = Web3.new(URL(string: "http://153.126.153.29:4444")!)
@@ -116,7 +124,7 @@ class ViewController: UIViewController {
         options.from = address
         guard let ret = contract.method("balanceOf", parameters: [address_string] as [AnyObject], options: options)?.call(options: nil) else {return false }
         //let balance = ret.value!["0"]
-        let balance_any = ret.value!["0"]
+        let balance_any = ret.value!["0"] as! Int?
         print(balance_any)
         
         //Any?から取り出せない
