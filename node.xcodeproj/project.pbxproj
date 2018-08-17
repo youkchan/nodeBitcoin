@@ -19,6 +19,7 @@
 		4C7A979A2122ACAE004BAD85 /* nodeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7A97992122ACAE004BAD85 /* nodeUITests.swift */; };
 		57E7C6D207B6A4CBE2C53F2B /* Pods_node.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554CEB44FF5B4C2F24BEC834 /* Pods_node.framework */; };
 		927928BF5E65914BB792F602 /* Pods_nodeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5089A755119E405127F9F091 /* Pods_nodeTests.framework */; };
+		CE0FA266212570EA000AE284 /* Base58.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0FA265212570EA000AE284 /* Base58.swift */; };
 		CED8C39BC8964DE1BFD29A95 /* Pods_nodeUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8043FDFF7CBE9C59C42BBB2B /* Pods_nodeUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -59,6 +60,7 @@
 		5089A755119E405127F9F091 /* Pods_nodeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nodeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		554CEB44FF5B4C2F24BEC834 /* Pods_node.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_node.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8043FDFF7CBE9C59C42BBB2B /* Pods_nodeUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_nodeUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CE0FA265212570EA000AE284 /* Base58.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base58.swift; sourceTree = "<group>"; };
 		E3DECCF5C79DEECCDA525675 /* Pods-nodeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nodeUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-nodeUITests/Pods-nodeUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E7DFCDD9E047704EBD06CE29 /* Pods-nodeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nodeTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nodeTests/Pods-nodeTests.release.xcconfig"; sourceTree = "<group>"; };
 		EC92FEAEB16E902612B42A81 /* Pods-nodeUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-nodeUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-nodeUITests/Pods-nodeUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 				4C7A97822122ACAE004BAD85 /* LaunchScreen.storyboard */,
 				4C7A97852122ACAE004BAD85 /* Info.plist */,
 				4C318B7C2123FA8D00958BA1 /* GoogleService-Info.plist */,
+				CE0FA265212570EA000AE284 /* Base58.swift */,
 			);
 			path = node;
 			sourceTree = "<group>";
@@ -408,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C7A977C2122ACAD004BAD85 /* ViewController.swift in Sources */,
+				CE0FA266212570EA000AE284 /* Base58.swift in Sources */,
 				4C7A977A2122ACAC004BAD85 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -583,9 +587,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FWR75FCDZ4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = node/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.node";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -599,9 +606,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = FWR75FCDZ4;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = node/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.node";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -618,7 +628,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -636,7 +650,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -653,7 +671,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -670,7 +692,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FWR75FCDZ4;
 				INFOPLIST_FILE = nodeUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "jp.co.atelier-node.nodeUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
